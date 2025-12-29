@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site oficial do Tona Lua Chef - Receitas, dicas culinárias e muito mais">
+    <meta name="keywords" content="receitas, culinária, chef, comida, gastronomia">
+    <meta name="author" content="Tona Lua Chef">
+    <title>Tona Lua Chef - Culinária com Sabor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d4a574">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Tona Lua Chef</h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#receitas" class="nav-link">Receitas</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Bem-vindo à Cozinha do Tona Lua Chef</h2>
+            <p class="hero-subtitle">Receitas deliciosas, dicas culinárias e muito sabor</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label">Receitas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5000">0</span>
+                    <span class="stat-label">Seguidores</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+            </div>
+            <a href="#receitas" class="btn btn-primary">Explorar Receitas</a>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mim</h2>
+                <p class="section-subtitle">Conheça um pouco da minha história na culinária</p>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>Olá! Sou Tona Lua Chef, apaixonado(a) por culinária e dedicado(a) a compartilhar receitas incríveis e técnicas culinárias com todos vocês.</p>
+                    <p>Minha jornada na cozinha começou há muitos anos, e desde então venho explorando sabores, criando receitas únicas e ajudando pessoas a descobrirem o prazer de cozinhar.</p>
+                    <p>Aqui você encontrará receitas deliciosas, dicas práticas e muito mais para tornar sua experiência na cozinha ainda mais especial.</p>
+                    <div class="sobre-skills">
+                        <div class="skill-item">
+                            <span class="skill-name">Cozinha Internacional</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Doces e Sobremesas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Culinária Vegetariana</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <div class="image-placeholder">
+                        <span>Foto do Chef</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Receitas Section -->
+    <section id="receitas" class="receitas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Receitas em Destaque</h2>
+                <p class="section-subtitle">Confira algumas das minhas receitas favoritas</p>
+            </div>
+            <div class="receitas-filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="doces">Doces</button>
+                <button class="filter-btn" data-filter="salgados">Salgados</button>
+                <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+            </div>
+            <div class="receitas-grid">
+                <div class="receita-card" data-category="salgados">
+                    <div class="receita-image">
+                        <div class="image-placeholder">
+                            <span>Imagem da Receita</span>
+                        </div>
+                        <div class="receita-badge">Salgado</div>
+                    </div>
+                    <div class="receita-content">
+                        <h3 class="receita-title">Receita Especial #1</h3>
+                        <p class="receita-desc">Uma receita deliciosa e fácil de preparar, perfeita para qualquer ocasião.</p>
+                        <div class="receita-meta">
+                            <span class="receita-time">⏱️ 30 min</span>
+                            <span class="receita-difficulty">⭐ Fácil</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ver Receita</a>
+                    </div>
+                </div>
+                <div class="receita-card" data-category="doces">
+                    <div class="receita-image">
+                        <div class="image-placeholder">
+                            <span>Imagem da Receita</span>
+                        </div>
+                        <div class="receita-badge">Doce</div>
+                    </div>
+                    <div class="receita-content">
+                        <h3 class="receita-title">Receita Especial #2</h3>
+                        <p class="receita-desc">Sabor único e ingredientes frescos que fazem toda a diferença.</p>
+                        <div class="receita-meta">
+                            <span class="receita-time">⏱️ 45 min</span>
+                            <span class="receita-difficulty">⭐ Médio</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ver Receita</a>
+                    </div>
+                </div>
+                <div class="receita-card" data-category="bebidas">
+                    <div class="receita-image">
+                        <div class="image-placeholder">
+                            <span>Imagem da Receita</span>
+                        </div>
+                        <div class="receita-badge">Bebida</div>
+                    </div>
+                    <div class="receita-content">
+                        <h3 class="receita-title">Receita Especial #3</h3>
+                        <p class="receita-desc">Uma combinação perfeita de sabores que vai surpreender seu paladar.</p>
+                        <div class="receita-meta">
+                            <span class="receita-time">⏱️ 15 min</span>
+                            <span class="receita-difficulty">⭐ Fácil</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ver Receita</a>
+                    </div>
+                </div>
+                <div class="receita-card" data-category="salgados">
+                    <div class="receita-image">
+                        <div class="image-placeholder">
+                            <span>Imagem da Receita</span>
+                        </div>
+                        <div class="receita-badge">Salgado</div>
+                    </div>
+                    <div class="receita-content">
+                        <h3 class="receita-title">Receita Especial #4</h3>
+                        <p class="receita-desc">Receita tradicional com toque especial e ingredientes selecionados.</p>
+                        <div class="receita-meta">
+                            <span class="receita-time">⏱️ 60 min</span>
+                            <span class="receita-difficulty">⭐ Avançado</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ver Receita</a>
+                    </div>
+                </div>
+                <div class="receita-card" data-category="doces">
+                    <div class="receita-image">
+                        <div class="image-placeholder">
+                            <span>Imagem da Receita</span>
+                        </div>
+                        <div class="receita-badge">Doce</div>
+                    </div>
+                    <div class="receita-content">
+                        <h3 class="receita-title">Receita Especial #5</h3>
+                        <p class="receita-desc">Sobremesa irresistível que vai encantar toda a família.</p>
+                        <div class="receita-meta">
+                            <span class="receita-time">⏱️ 40 min</span>
+                            <span class="receita-difficulty">⭐ Médio</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ver Receita</a>
+                    </div>
+                </div>
+                <div class="receita-card" data-category="bebidas">
+                    <div class="receita-image">
+                        <div class="image-placeholder">
+                            <span>Imagem da Receita</span>
+                        </div>
+                        <div class="receita-badge">Bebida</div>
+                    </div>
+                    <div class="receita-content">
+                        <h3 class="receita-title">Receita Especial #6</h3>
+                        <p class="receita-desc">Bebida refrescante e saborosa para qualquer momento do dia.</p>
+                        <div class="receita-meta">
+                            <span class="receita-time">⏱️ 10 min</span>
+                            <span class="receita-difficulty">⭐ Fácil</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ver Receita</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galeria</h2>
+                <p class="section-subtitle">Alguns momentos especiais da cozinha</p>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <div class="image-placeholder">
+                        <span>Foto 1</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="image-placeholder">
+                        <span>Foto 2</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="image-placeholder">
+                        <span>Foto 3</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="image-placeholder">
+                        <span>Foto 4</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="image-placeholder">
+                        <span>Foto 5</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <div class="image-placeholder">
+                        <span>Foto 6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O Que Dizem Sobre Mim</h2>
+                <p class="section-subtitle">Depoimentos de quem já experimentou minhas receitas</p>
+            </div>
+            <div class="depoimentos-slider">
+                <div class="depoimento-card">
+                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="depoimento-text">"As receitas do Tona Lua Chef são incríveis! Sempre que preciso de inspiração na cozinha, venho aqui. Recomendo muito!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">👤</div>
+                        <div class="author-info">
+                            <h4>Maria Silva</h4>
+                            <p>Seguidora</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="depoimento-text">"Adoro as dicas e técnicas compartilhadas. Minha cozinha melhorou muito depois que comecei a seguir as receitas!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">👤</div>
+                        <div class="author-info">
+                            <h4>João Santos</h4>
+                            <p>Seguidor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="depoimento-text">"Receitas fáceis de seguir e resultados sempre deliciosos. Meu lugar favorito para aprender culinária!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">👤</div>
+                        <div class="author-info">
+                            <h4>Ana Costa</h4>
+                            <p>Seguidora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Adoraria ouvir de você! Envie sua mensagem.</p>
+            </div>
+            <div class="contato-wrapper">
+                <form class="contato-form" id="contatoForm">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone (opcional)">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+                <div class="contato-info">
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>contato@tonaluachef.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h4>Telefone</h4>
+                            <p>(00) 0000-0000</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Localização</h4>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" class="social-link" aria-label="Facebook">👤 Facebook</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️ YouTube</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵 TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tona Lua Chef</h3>
+                    <p>Compartilhando paixão pela culinária e receitas deliciosas desde 2015.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#receitas">Receitas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tona Lua Chef. Todos os direitos reservados.</p>
+                <p>Feito com ❤️ e muito sabor</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
