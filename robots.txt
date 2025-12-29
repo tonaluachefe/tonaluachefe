@@ -1,0 +1,8 @@
+# robots.txt para Tona Lua Chef
+
+User-agent: *
+Allow: /
+
+# Sitemap (quando disponível)
+# Sitemap: https://tonaluachefe.github.io/tonaluachefe/sitemap.xml
+
