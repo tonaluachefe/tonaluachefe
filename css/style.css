@@ -803,4 +803,92 @@ section {
     }
 }
 
+/* Social Media Sidebar */
+.social-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 25px 0 0 25px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 998;
+    transition: var(--transition);
+}
+
+[data-theme="dark"] .social-sidebar {
+    background: rgba(44, 44, 44, 0.95);
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 50%;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+[data-theme="dark"] .social-icon {
+    background: var(--white);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.social-icon:hover {
+    transform: translateX(-5px) scale(1.1);
+    color: var(--white);
+    background: var(--primary-color);
+}
+
+.social-icon::before {
+    content: attr(aria-label);
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    pointer-events: none;
+    margin-right: 10px;
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .social-sidebar {
+        right: -40px; /* Partially hide */
+        padding: 0.5rem 0.2rem;
+    }
+    .social-sidebar:hover {
+        right: 0; /* Show on hover */
+    }
+    .social-icon::before {
+        display: none; /* Hide tooltips on mobile */
+    }
+}
 
